@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Reflection;
+//using System.Reflection;
 using System.Xml.Serialization;
 using ColossalFramework.IO;
 using ColossalFramework.UI;
@@ -12,7 +12,7 @@ using CustomizeItExtended.Internal.Vehicles;
 using CustomizeItExtended.Legacy;
 using CustomizeItExtended.Settings;
 using CustomizeItExtended.Translations;
-using Harmony;
+using HarmonyLib;
 using ICities;
 using UnityEngine;
 
@@ -26,7 +26,7 @@ namespace CustomizeItExtended
 
         private static CustomizeItExtendedSettings _settings;
 
-        private static HarmonyInstance _harmony;
+        //private static HarmonyInstance _harmony; // 230630
         public static bool DebugMode =
             File.Exists(Path.Combine(DataLocation.localApplicationData, "CSharpDebugMode.txt"));
 
@@ -62,7 +62,8 @@ namespace CustomizeItExtended
 
         public void OnEnabled()
         {
-            _harmony = HarmonyInstance.Create("com.github.celisuis.csl.customizeitextended");
+            //_harmony = HarmonyInstance.Create("com.github.celisuis.csl.customizeitextended"); // 230630 Infixo
+            var _harmony = new Harmony("com.github.celisuis.csl.customizeitextended");
 
             try
             {
@@ -95,6 +96,8 @@ namespace CustomizeItExtended
 
         public void OnDisabled()
         {
+            var _harmony = new Harmony("com.github.celisuis.csl.customizeitextended"); // 230630 Infixo
+
             try
             {
                 _harmony.UnpatchAll("com.github.celisuis.csl.customizeitextended");    

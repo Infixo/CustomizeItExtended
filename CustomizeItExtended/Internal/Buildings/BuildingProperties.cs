@@ -10,6 +10,8 @@ namespace CustomizeItExtended.Internal.Buildings
     [Serializable]
     public class BuildingProperties
     {
+        /* 230630 Infixo Everything ex. for workplace counts is disabled
+        
         public int m_academicBoostBonus;
 
         // Healthcare
@@ -189,13 +191,14 @@ namespace CustomizeItExtended.Internal.Buildings
         public int m_waterStockpileAmount;
         public int m_waterStockpileRate;
         public int m_waterStorage;
-
+        */
         // Workplace Counts
         public int m_workPlaceCount0;
         public int m_workPlaceCount1;
         public int m_workPlaceCount2;
         public int m_workPlaceCount3;
-        
+
+        /* 230630 Infixo
         // Nursing Home Mod
         public int numEducatedWorkers;
         public int numHighlyEducatedWorkers;
@@ -208,7 +211,7 @@ namespace CustomizeItExtended.Internal.Buildings
         
         public int m_boatCount;
         public int m_storageBufferSize;
-        
+        */
 
         public BuildingProperties()
         {

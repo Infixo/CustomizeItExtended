@@ -26,7 +26,7 @@ namespace CustomizeItExtended.Internal.Citizens
 
         internal Dictionary<uint, string> OriginalJobTitles = new Dictionary<uint, string>();
 
-        internal UIButton ResetAllButton;
+        //internal UIButton ResetAllButton; // 230630 Infixo not used
 
         internal uint SelectedCitizen;
 
